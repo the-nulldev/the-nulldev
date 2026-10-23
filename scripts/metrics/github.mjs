@@ -2,7 +2,7 @@ const GRAPHQL_ENDPOINT = 'https://api.github.com/graphql';
 const REST_ENDPOINT = 'https://api.github.com';
 
 const PROFILE_QUERY = `
-  query Profile($login: String!, $since: GitTimestamp!, $from: GitTimestamp!, $to: GitTimestamp!) {
+  query Profile($login: String!, $since: GitTimestamp!, $from: DateTime!, $to: DateTime!) {
     user(login: $login) {
       login
       name
